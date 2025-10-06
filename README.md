@@ -52,3 +52,5 @@ float bias[3] = {
 ```
 
 Bobot dan bias tersebut diambil dari hasil training dan diterapkan langsung pada kode Arduino untuk proses prediksi warna menggunakan model ANN.
+
+<img width="487" height="314" alt="image" src="https://github.com/user-attachments/assets/0c282e78-88b8-4631-8561-333f1907ae6a" />

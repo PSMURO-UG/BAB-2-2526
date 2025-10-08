@@ -1,6 +1,6 @@
-Kerjakan ANN Untuk Logic Gates AND terlebih dahulu
-Setelah itu ANN Untuk Seven Segment Display
-Selanjutnya dan terakhir ANN Untuk Deteksi Warna
+- Kerjakan ANN Untuk Logic Gates AND terlebih dahulu
+- Setelah itu ANN Untuk Seven Segment Display
+- Selanjutnya dan terakhir ANN Untuk Deteksi Warna
 
 Catatan :
 1. Menggunakan matplotlib dan numpy dengan pip install namalibrary

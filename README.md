@@ -7,4 +7,10 @@ Catatan :
 - Jika menggunakan anaconda conda tos accept pada terminal VSCODE Anaconda
 - Jangan lupa ambil bias dan weight pada percobaan ANN Untuk Deteksi Warna dari Perceptron Learning di Google Colab
 
+Untuk deteksi warna kuning :
+- if (R > 0.6 && G > 0.6 && B < 0.4)
+Ambang ini bisa kamu sesuaikan setelah melakukan kalibrasi sensor (misalnya ubah 0.6 → 0.7 jika terlalu sensitif).
+- Pastikan permukaan objek kuning cukup terang dan sensor dekat (1–2 cm).
+- Lakukan sampling w (putih) dan b (hitam) sebelum pengukuran untuk hasil akurat.
+- Kombinasi LED merah + hijau digunakan sebagai indikator kuning tanpa perlu LED ekstra.
 Have Fun :)))

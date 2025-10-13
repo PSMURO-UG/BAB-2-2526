@@ -13,4 +13,5 @@ Ambang ini bisa kamu sesuaikan setelah melakukan kalibrasi sensor (misalnya ubah
 - Pastikan permukaan objek kuning cukup terang dan sensor dekat (1–2 cm).
 - Lakukan sampling w (putih) dan b (hitam) sebelum pengukuran untuk hasil akurat.
 - Kombinasi LED merah + hijau digunakan sebagai indikator kuning tanpa perlu LED ekstra.
+
 Have Fun :)))

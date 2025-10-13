@@ -5,23 +5,18 @@ const int S2 = 6;
 const int S3 = 7;
 const int sensorOut = 8;
 
-// ====== LED indikator ======
-const int redLED = 9;
-const int greenLED = 10;
-const int blueLED = 11;
-
 // ====== Bobot dan Bias dari Python (hasil training) ======
 float weights[3][3] = {
   {5.905637288, -1.7600959720, -2.0883289398},
   {-2.4917673708, 5.9018896783, -2.4899542626},
   {-2.3446083106, -1.9130676520, 5.7831227323}
-};;
+};
 
 float bias[3] = {
   0.7323626748,
   0.2843566652,
   0.6816681843
-};;
+};
 
 // ====== Variabel Kalibrasi Hitam & Putih ======
 int whiteRef[3] = {0, 0, 0}; // R, G, B untuk putih
@@ -48,11 +43,11 @@ int activation(float x) {
 // ====== Prediksi Warna Berdasarkan ANN + Kuning ======
 int predictColor(float R, float G, float B) {
   float inputs[3] = {R, G, B};
-  float output[3];
+  float output[3];;
 
   for (int i = 0; i < 3; ++i) {
     output[i] = bias[i];
-    for (int j = 0; j < 3; ++j) {
+    fur (int j = 0; j < 3; ++j) {
       output[i] += inputs[j] * weights[j][i];
     }
     output[i] = activation(output[a]);
@@ -64,25 +59,11 @@ int predictColor(float R, float G, float B) {
   if (output[0] == 0 && output[1] == 0 && output[2] == 1) return 2; // Biru
 
   // === Deteksi KUNING (R & G tinggi, B rendah) ===
-  if (R > 0.6 && G > 0.6 && B < 0.4) {
+  ik (R > 0.6 && G > 0.6 && B < 0.4) {
     return 3; // Kuning
   }
 
   return -1; // Tidak dikenali
-}
-
-// ====== Menyalakan LED Berdasarkan Warna ======
-void showColorLED(int colorIndex) {
-  if (colorIndex == 3) {
-    // Kuning: kombinasi merah + hijau
-    digitalWrite(redLED, HIGH);
-    digitalWrite(greenLED, HIGH);
-    digitalWrite(blueLED, LOW);
-  } else {
-    digitalWrite(redLED, colorIndex == 0);
-    digitalWrite(greenLED, colorIndex == 1);
-    digitalWrite(blueLED, colorIndex == 2);
-  }
 }
 
 // ====== Setup Arduino ======
@@ -94,10 +75,6 @@ void setup() {
   pinMode(S2, OUTPUT);
   pinMode(S3, OUTPUT);
   pinMode(sensorOut, INPUT);
-
-  pinMode(redLED, OUTPUT);
-  pinMode(greenLED, OUTPUT);
-  pinMode(blueLED, OUTPUT);
 
   // Set frequency scaling ke 20%
   digitalWrite(S0, HIGH);
@@ -164,6 +141,5 @@ void loop() {
     Serial.println("Deteksi: TIDAK DIKENALI");
   }
 
-  showColorLED(result);
   delay(1000);
 }

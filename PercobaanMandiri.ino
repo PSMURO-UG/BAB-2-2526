@@ -7,9 +7,9 @@ const int sensorOut = 8;
 
 // ====== Bobot dan Bias dari Python (hasil training) ======
 float weights[3][3] = {
-  {5.905637288, -1.7600959720, -2.0883289398},
-  {-2.4917673708, 5.9018896783, -2.4899542626},
-  {-2.3446083106, -1.9130676520, 5.7831227323}
+  {isidaripelatihanjanganlupakoma},
+  {isidaripelatihanjanganlupakoma},
+  {isidaripelatihanjanganlupakoma}
 };
 
 float bias[3] = {
